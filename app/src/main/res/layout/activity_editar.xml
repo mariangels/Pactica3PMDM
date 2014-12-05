@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.izv.fragmentosorientacion.ActividadEditar">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eLocalidad"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:hint="localidad"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eCalle"
+            android:layout_below="@+id/eLocalidad"
+            android:hint="calle"
+            android:layout_alignRight="@+id/eLocalidad"
+            android:layout_alignEnd="@+id/eLocalidad"
+            android:layout_alignLeft="@+id/eNumero"
+            android:layout_alignStart="@+id/eNumero"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eNumero"
+            android:layout_below="@+id/eCalle"
+            android:hint="numero"
+            android:layout_alignRight="@+id/eLocalidad"
+            android:layout_alignEnd="@+id/eLocalidad"
+            android:layout_alignLeft="@+id/eLocalidad"
+            android:layout_alignStart="@+id/eLocalidad"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTipo"
+            android:layout_below="@+id/eNumero"
+            android:hint="tipo"
+            android:layout_alignRight="@+id/eNumero"
+            android:layout_alignEnd="@+id/eNumero"
+            android:layout_alignLeft="@+id/ePrecio"
+            android:layout_alignStart="@+id/ePrecio"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ePrecio"
+            android:layout_below="@+id/eTipo"
+            android:hint="precio"
+            android:layout_alignRight="@+id/eLocalidad"
+            android:layout_alignEnd="@+id/eLocalidad"
+            android:layout_alignLeft="@+id/eLocalidad"
+            android:layout_alignStart="@+id/eLocalidad"
+            android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ePrecio">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:id="@+id/aceptar"
+                android:onClick="guardar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:id="@+id/button2"
+            android:layout_toEndOf="@+id/aceptar"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/aceptar"
+            android:onClick="cancelar" />
+    </RelativeLayout>
+
+</RelativeLayout>

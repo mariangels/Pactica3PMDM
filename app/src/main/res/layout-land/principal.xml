@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:name="com.izv.fragmentosorientacion.FragmentoLista"
+        android:id="@+id/fLista"
+        tools:layout="@layout/fragmento_lista" />
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:name="com.izv.fragmentosorientacion.FragmentoDetalle"
+        android:id="@+id/fDet"
+        tools:layout="@layout/fragmento_detalle"
+        android:layout_toRightOf="@+id/fLista"
+        android:layout_toEndOf="@+id/fLista" />
+</RelativeLayout>
+</LinearLayout>
